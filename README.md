@@ -1,12 +1,8 @@
-# dropnote
-`dropnote` was generated with `cw-pipeline`.
+# Dropnote
+Dropnote is a zero-knowledge, e2e, asymmetrically encrypted on-chain messaging system.
 
-Following is a list of relevant and helpful CLI tools you may use:
+Recipients can deposit a public key for encryption on-chain. Senders can then store encrypted messages, likewise on-chain. Only the owner of the corresponding private key can decrypt and read these messages.
 
-- `cargo test` - run unit tests of your project.
-- `./build.sh` - build & optimize your project for the blockchain. The contract .wasm will be in `artifacts/`.
-- `cargo schema` - generate JSON schemas of your project.
-- `cw-pipeline store` - upload & store the project's .wasm contract file (aka *code*).
-- `cw-pipeline instantiate` - instantiate an uploaded contract *code*. Not bound to this project.
-- `cw-pipeline exec` - execute a transaction on a contract instance. Not bound to this project.
-- `cw-pipeline query` - run a *smart query* on a contract instance. Not bound to this project.
+Messages do not have to be encrypted. This is useful to leave a dropnote for a wallet which hasn't registered a public encryption key yet. Obviously, such messages should not contain sensitive content.
+
+Since Dropnote stores every single message on-chain, it is not adequate for real-time communication. Instead, it is intended to initiate communication with the owner of a wallet without knowing that wallet's contact details. This is, of course, still in no way a guarantee to actually reach the wallet owner.
