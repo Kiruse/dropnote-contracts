@@ -1,5 +1,5 @@
 # Dropnote
-Dropnote is a zero-knowledge, e2e, asymmetrically encrypted on-chain messaging system.
+Dropnote is a zero-knowledge, e2e, asymmetrically encrypted on-chain messaging system. This is its smart contract. [Here is its Dapp.](https://github.com/Kiruse/droptnote-frontend)
 
 Recipients can deposit a public key for encryption on-chain. Senders can then store encrypted messages, likewise on-chain. Only the owner of the corresponding private key can decrypt and read these messages.
 
